@@ -65,7 +65,7 @@ async function getInfo() {
 		tempUnit = '°F';
 	}
 	try {
-		let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${KEY}&units=${unit}`);
+		let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${KEY}&units=${unit}`);
 		let info = await response.json();
 		displayWeatherInfo(info, speedUnit, tempUnit);
 	} catch (error) {
