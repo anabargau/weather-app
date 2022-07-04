@@ -5,9 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Check</title>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="content"></div>
+    <div class="content">
+        <header>
+            <div class="title">wthr.</div>
+            <div id="choose-units">
+                <input type="radio" name="units" id="metric" value="metric" checked>
+                <label for="metric">&#8451</label>
+                <input type="radio" name="units" id="imperial" value="imperial">
+                <label for="imperial">&#8457</label>
+            </div>
+        </header>
+        <div class="weather-content">
+            <form action="#" method="get">
+                <label for="location">Location:</label>
+                <input id="location" type="text" placeholder="City name..." value="London">
+                <button id="search">Show weather</button>
+            </form>
+            <div id="weather-info">
+                <div id="weather-main"></div>
+                <div id="main-temp"></div>
+                <div id="weather-image"></div>
+                <div class="info">
+                    <div class="info-title">Max-temp: </div>
+                    <div id="max-temp-info"></div>
+                </div>
+                <div class="info">
+                    <div class="info-title">Min-temp: </div>
+                    <div id="min-temp-info"></div>
+                </div>
+                <div class="info">
+                    <div class="info-title">Humidity: </div>
+                    <div id="humidity-info"></div>
+                </div>
+                <div class="info">
+                    <div class="info-title">Visibility: </div>
+                    <div id="visibility-info"></div>
+                </div>
+                <div class="info">
+                    <div class="info-title">Wind speed: </div>
+                    <div id="wind-info"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
